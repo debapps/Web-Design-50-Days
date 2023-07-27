@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    background-color: #333;
+    color: #222;
+}
+
+.container {
+    background-color: #fafafa;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.container.show-nav {
+    transform: rotate(-20deg);
+}
+
+nav {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+}
+
+.container.show-nav + nav li {
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+nav ul li {
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 40px 0;
+    transform: translateX(-115px);
+    transition: transform 0.5s ease-in-out;
+}
+
+nav ul li + li {
+    margin-left: 15px;
+    transform: translateX(-150px);
+}
+
+nav ul li + li + li {
+    margin-left: 30px;
+    transform: translateX(-200px);
+}
+
+nav ul li i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle {
+    background-color: palevioletred;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+
+.container.show-nav .circle {
+    transform: rotate(-70deg);
+}
+
+.circle button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-size: 26px;
+}
+
+.circle button:focus {
+    outline: none;
+}
+
+.circle button#open {
+    left: 65%;
+}
+
+.circle button#close {
+    left: 25%;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 20px;
+}
+.content img {
+    max-width: 100%;
+}
