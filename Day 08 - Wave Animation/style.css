@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 :root {
-    --light-color: #f9f7f7;
-    --dark-color: #232020;
+    --bg-color: steelblue;
+    --text-color: white;
     --heading-color: #461d89;
 }
 
@@ -20,19 +20,99 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--light-color);
-    color: var(--dark-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .container {
-    width: 90vw;
+    width: 50vw;
     height: auto;
-    margin: 30px auto;
+    background-color: rgba(59, 54, 54, 0.167);
+    padding: 30px 40px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .heading {
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     color: var(--heading-color);
+}
+
+.container a {
+    text-decoration: none;
+    color: lightblue;
+}
+
+.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+
+.form-control input {
+    width: 100%;
+    display: block;
+    padding: 10px 0;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid var(--text-color);
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: none;
+    border-bottom-color: lightblue;
+}
+
+.form-control label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    min-width: 5px;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+    color: lightblue;
+    transform: translateY(-30px);
+}
+
+.btn {
+    width: 100%;
+    cursor: pointer;
+    display: block;
+    background-color: lightblue;
+    color: var(--heading-color);
+    border: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:hover {
+    background-color: aqua;
+}
+
+.btn:active {
+    transform: scale(0.95);
 }
