@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+    --light-color: #f9f7f7;
+    --dark-color: #232020;
+    --heading-color: #461d89;
+    --bg-color: #4e6fda;
+    --button-color: #5bdd50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--bg-color);
+    color: var(--dark-color);
+}
+
+.container {
+    max-width: 95%;
+    height: auto;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-color);
+    padding: 30px 40px;
+    border-radius: 5px;
+    box-shadow: 2px 5px 10px var(--dark-color);
+    gap: 30px;
+    font-family: "Poppins", sans-serif;
+}
+
+.container h3 {
+    font-family: inherit;
+    font-size: 0.85rem;
+    color: var(--heading-color);
+}
+
+.joke {
+    font-family: inherit;
+    font-size: 1.25rem;
+    color: var(--dark-color);
+    white-space: wrap;
+    text-align: left;
+    margin: 40px auto;
+}
+
+.jokeBtn {
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 15px;
+    border: 0;
+    background-color: var(--button-color);
+    border-radius: 5px;
+    box-shadow: 1px 2px 5px var(--dark-color);
+}
+
+.jokeBtn:focus {
+    outline: none;
+}
+
+.jokeBtn:hover {
+    opacity: 0.75;
+}
+
+.jokeBtn:active {
+    opacity: 1;
+    transform: scale(0.98);
+}

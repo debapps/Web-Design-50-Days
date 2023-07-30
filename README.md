@@ -13,3 +13,4 @@ This is simple HTML, CSS and JavaScript projects challenge for 50 projects in 50
 -   **Day 7:** Split Landing Page.
 -   **Day 8:** Wave Animation.
 -   **Day 9:** Sound Board.
+-   **Day 10:** Dad Jokes.
