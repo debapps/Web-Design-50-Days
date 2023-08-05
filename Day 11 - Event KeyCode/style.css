@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+    --light-color: #f9f7f7;
+    --dark-color: #232020;
+    --heading-color: #461d89;
+    --box-heading-bg-color: #285df0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+.container {
+    width: 100vw;
+    height: auto;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--heading-color);
+}
+
+.box-container {
+    width: 95%;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.initial-box {
+    max-width: 100%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 20px;
+    padding: 50px;
+    text-align: center;
+    border: 1px solid var(--dark-color);
+}
+
+.box {
+    max-width: 100%;
+    width: 20%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--dark-color);
+    box-shadow: 2px 5px 5px var(--heading-color);
+    overflow: hidden;
+    transition: transform 0.3 ease;
+}
+
+.box:hover {
+    transform: scale(1.02);
+}
+
+.box-heading {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: inherit;
+    background-color: var(--box-heading-bg-color);
+    color: var(--light-color);
+    padding: 15px 10px;
+}
+
+.box-value {
+    font-family: inherit;
+    font-size: 3rem;
+    color: var(--dark-color);
+    opacity: .75;
+    padding: 20px 15px;
+}
+
+@media (max-width: 640px) {
+    .box {
+        width: 100%;
+    }
+}
+

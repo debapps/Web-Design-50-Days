@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+    --light-color: #f9f7f7;
+    --dark-color: #232020;
+    --heading-color: #461d89;
+    --bg-color: #1aec8a;
+    --active-color: #e2136a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    color: var(--dark-color);
+    position: relative;
+}
+
+.container {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#textarea {
+    width: 100%;
+    height: 50%;
+    font-size: 1rem;
+    font-family: inherit;
+    padding: 10px;
+    color: var(--dark-color);
+    border: 0;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+#textarea:focus {
+    outline: none;
+}
+
+#tags {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tag {
+    margin: 5px;
+    min-width: 40px;
+    background-color: var(--heading-color);
+    color: var(--light-color);
+    font-size: .85rem;
+    font-weight: 600;
+    padding: 5px;
+    border: 1px solid var(--dark-color);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.tag.highlight {
+    background-color: var(--active-color);
+}
