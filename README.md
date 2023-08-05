@@ -17,3 +17,5 @@ This is simple HTML, CSS and JavaScript projects challenge for 50 projects in 50
 -   **Day 11:** Event KeyCode.
 -   **Day 12:** FAQ Accordian.
 -   **Day 13:** Random Choice Picker.
+-   **Day 14:** Animated Navigation.
+-   **Day 15:** Increment Counter.
