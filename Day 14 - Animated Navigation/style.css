@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+    --light-color: #f9f7f7;
+    --dark-color: #232020;
+    --heading-color: #461d89;
+    --button-color: #1456e4;
+    --bg-color: #1ce68f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    color: var(--dark-color);
+}
+
+.container {
+    width: 75%;
+    height: auto;
+    margin: 30px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--heading-color);
+    text-align: center;
+}
+
+header {
+    position: relative;
+    margin: 50px 30px;
+}
+
+.nav-btn {
+    border: none;
+    position: relative;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.nav-btn:focus {
+    outline: none;
+}
+
+.nav-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--button-color);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: transform 0.6s ease;
+}
+
+.first {
+    top: 0;
+    left: 50%;
+}
+
+.second {
+    bottom: 0;
+    left: 50%;
+}
+
+nav.active .nav-btn .first {
+    top: 50%;
+    transform: rotate(765deg);
+}
+
+nav.active .nav-btn .second {
+    top: 50%;
+    transform: rotate(-765deg);
+}
+
+nav {
+    background-color: var(--light-color);
+    padding: 30px;
+    border-radius: 5px;
+    width: 10%;
+    min-width: fit-content;
+    transform: width 0.5s ease;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.6s linear;
+}
+
+nav.active {
+    width: 100%;
+    max-width: 600px;
+}
+
+nav .links {
+    display: none;
+}
+
+nav.active .links {
+    display: inline-block;
+    transition: all 0.6s linear;
+}
+
+nav nav .nav-link {
+    opacity: 0;
+    transform: rotateY(0deg);
+    transform-origin: center;
+    transition: all 0.6s linear;
+}
+
+nav.active .nav-link {
+    opacity: 100;
+    transform: rotateY(5400deg);
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    color: var(--dark-color);
+    margin: 10px;
+    text-align: center;
+}
