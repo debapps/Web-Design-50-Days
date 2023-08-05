@@ -13,25 +13,26 @@
 }
 body {
     font-family: "Poppins", sans-serif;
-    font-size: 18px;
+    width: 100vw;
     min-height: 100vh;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: var(--light-color);
     color: var(--dark-color);
 }
 
 .container {
-    width: 90vw;
+    width: 75%;
     height: auto;
     margin: 30px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .heading {
-    font-size: 32px;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 10px;
     color: var(--heading-color);
