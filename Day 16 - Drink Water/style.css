@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+
+:root {
+    --light-color: #f9f7f7;
+    --dark-color: #232020;
+    --dark-blue-color: #201755;
+    --bg-color: #5856a3ef;
+    --fill-color: #6ab3f8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--bg-color);
+    color: var(--light-color);
+}
+
+.container {
+    width: 75%;
+    height: auto;
+    margin: 30px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.heading {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 20px 0;
+    color: var(--light-color);
+}
+
+.sub-heading {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: var(--light-color);
+}
+
+.para-text {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 0;
+    color: var(--light-color);
+}
+
+.cup {
+    background-color: var(--light-color);
+    color: var(--dark-blue-color);
+    margin: 20px;
+    height: 330px;
+    width: 150px;
+    border: 4px solid var(--dark-blue-color);
+    border-radius: 0 0 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cups {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.cup.cup-small {
+    height: 95px;
+    width: 50px;
+    border-radius: 0 0 15px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px;
+    transition: 0.3s ease;
+}
+
+.cup.cup-small.full {
+    background-color: var(--fill-color);
+}
+
+.remained {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: 0.3s ease;
+}
+
+.remained span {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.remained small {
+    font-size: 12px;
+}
+
+.percent {
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fill-color);
+    width: 100%;
+    transition: 0.3s ease;
+    height: 0%;
+}

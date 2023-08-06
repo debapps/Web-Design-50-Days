@@ -19,3 +19,4 @@ This is simple HTML, CSS and JavaScript projects challenge for 50 projects in 50
 -   **Day 13:** Random Choice Picker.
 -   **Day 14:** Animated Navigation.
 -   **Day 15:** Increment Counter.
+-   **Day 16:** Drink Water.
