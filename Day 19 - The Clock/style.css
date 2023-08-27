@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+    --primary-color: #232020;
+    --secondary-color: #f9f7f7;
+    --heading-color: #461d89;
+}
+
+html {
+    transition: all 0.5s ease-in;
+}
+
+html.dark {
+    --primary-color: #f9f7f7;
+    --secondary-color: #161414;
+    --heading-color: #ef0bba;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+}
+
+.container {
+    width: 75%;
+    height: auto;
+    margin: 30px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--heading-color);
+}
+
+.toggle {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    margin: 0 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.toggle:focus {
+    outline: none;
+}
+
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    background-color: var(--secondary-color);
+    border-radius: 100%;
+    border: 5px solid var(--primary-color);
+}
+
+.needle {
+    background-color: var(--primary-color);
+    width: 2px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+}
+
+.hour {
+    transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.minute {
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 70px;
+}
+
+.second {
+    transform: translate(-50%, -100%) rotate(60deg);
+    height: 90px;
+    background-color: red;
+}
+
+.center-point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    border: 2px solid red;
+}
+
+.time {
+    font-family: "Poppins", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    background-color: var(--heading-color);
+    color: var(--secondary-color);
+    padding: 5px 15px;
+    margin: 5px;
+}
+
+.date {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    padding: 5px 10px;
+    margin: 5px;
+}
