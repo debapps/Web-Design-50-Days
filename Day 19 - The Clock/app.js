@@ -68,6 +68,8 @@ const hourNeedle = document.querySelector(".hour");
 const minuteNeedle = document.querySelector(".minute");
 const secondNeedle = document.querySelector(".second");
 
+// moveHourNeedle();
+
 function displayDateTime() {
     // Get current date time.
     const currentDate = new Date();
@@ -84,7 +86,7 @@ function displayDateTime() {
     }deg)`;
 }
 
-function moveMinuteNeedle() {
+function moveMinuteHourNeedle() {
     // Get current date time.
     const currentDate = new Date();
 
@@ -95,11 +97,6 @@ function moveMinuteNeedle() {
     minuteNeedle.style.transform = `translate(-50%, -100%) rotate(${
         minute * 6
     }deg)`;
-}
-
-function moveHourNeedle() {
-    // Get current date time.
-    const currentDate = new Date();
 
     // Get the current hour.
     let hour = currentDate.getHours();
@@ -108,15 +105,14 @@ function moveHourNeedle() {
         hour = hour - 12;
     }
 
+    let hourAngle = hour * 30 + minute / 12;
+
     // Rotate the hour needle.
-    hourNeedle.style.transform = `translate(-50%, -100%) rotate(${
-        hour * 30
-    }deg)`;
+    hourNeedle.style.transform = `translate(-50%, -100%) rotate(${hourAngle}deg)`;
 }
 
 setInterval(displayDateTime, 1);
-setInterval(moveMinuteNeedle, 60);
-setInterval(moveHourNeedle, 360);
+setInterval(moveMinuteHourNeedle, 60);
 
 // Set the dark mode.
 const toggleBtn = document.querySelector(".toggle");
