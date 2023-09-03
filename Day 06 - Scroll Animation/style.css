@@ -23,7 +23,7 @@ body {
     color: var(--dark-color);
 }
 
-.container {
+.card {
     width: 50vw;
     height: auto;
     margin: 30px auto;
@@ -31,16 +31,18 @@ body {
     border: 2px solid var(--dark-color);
     border-radius: 10px;
     box-shadow: 2px 4px 5px var(--heading-color);
-    transform: translateX(400%);
-    transition: transform 0.5s ease;
+    transform: translateX(200px);
+    opacity: 0;
+    transition: all 0.6s ease-in;
 }
 
-.container:nth-of-type(even) {
-    transform: translateX(-400%);
+.card:nth-of-type(even) {
+    transform: translateX(-200px);
 }
 
-.container.show {
+.card.show {
     transform: translateX(0px);
+    opacity: 1;
 }
 
 .heading {
@@ -51,7 +53,7 @@ body {
 }
 
 @media (max-width: 600px) {
-    .container {
+    .card {
         width: 90vw;
     }
 }

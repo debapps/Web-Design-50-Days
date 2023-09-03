@@ -1,23 +1,29 @@
 // Get the DOM elements.
-const boxes = document.querySelectorAll(".container");
+const boxes = document.querySelectorAll(".card");
 
-// Add the scroll listeners.
-window.addEventListener("scroll", showBoxes);
+// Observer API options.
+const options = {
+    // root: document.getElementsByTagName("body")[0],
+    // rootMargin: "0px",
+    threshold: 0.8,
+};
 
-// This function shows the boxes in the viewport.
-function showBoxes() {
-    const triggerButtom = (window.innerHeight / 5) * 3;
+// Intersection observer object.
+let observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        // Get the current entry element.
+        const elem = entry.target;
 
-    boxes.forEach((box) => {
-        // Get the top of the box.
-        const boxTop = box.getBoundingClientRect().top;
+        // Make the element visible when it is intersecting.
+        elem.classList.toggle("show", entry.isIntersecting);
 
-        if (boxTop < triggerButtom) {
-            box.classList.add("show");
-        } else {
-            box.classList.remove("show");
-        }
+        // Once visible stay on screen.
+        // if (entry.isIntersecting) {
+        //     observer.unobserve(elem);
+        // }
     });
-}
+}, options);
 
-showBoxes();
+boxes.forEach((box) => {
+    observer.observe(box);
+});
