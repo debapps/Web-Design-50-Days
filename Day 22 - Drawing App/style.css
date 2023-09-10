@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+    --light-color: #f9f7f7;
+    --dark-color: #232020;
+    --heading-color: #2aefcb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--dark-color);
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    margin: 30px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--heading-color);
+}
+
+canvas {
+    border: 2px solid var(--dark-color);
+    background-color: #fff;
+}
+
+.toolbox {
+    background-color: var(--heading-color);
+    width: 800px;
+    display: flex;
+    justify-content: center;
+}
+
+.toolbox > * {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    margin: 0.25rem;
+    padding: 0.25rem;
+    background-color: var(--light-color);
+    border: none;
+    cursor: pointer;
+}
+
+.toolbox > *:last-child {
+    margin-left: auto;
+}
+
+button {
+    transition: transform 0.2s ease;
+}
+
+button:active {
+    transform: scale(95%);
+}
