@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+    --page-color: #5a043f;
+    --heading-color: #65d1b6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: var(--page-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.heading {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 20px auto 30px;
+    color: var(--heading-color);
+}
+
+.loader::before,
+.loader::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom-color: var(--heading-color);
+    animation: rotateA 2s linear 0.5s infinite;
+}
+
+.loader::before {
+    transform: translate(-50%, -50%) rotate(90deg);
+    animation: rotateB 2s linear infinite;
+}
+
+@keyframes rotateA {
+    0%,
+    25% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    50%,
+    75% {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes rotateB {
+    0%,
+    25% {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    50%,
+    75% {
+        transform: translate(-50%, -50%) rotate(270deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(450deg);
+    }
+}

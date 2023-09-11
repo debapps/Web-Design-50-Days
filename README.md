@@ -26,3 +26,4 @@ This is simple HTML, CSS and JavaScript projects challenge for 50 projects in 50
 -   **Day 20:** Button Ripple Effect.
 -   **Day 21:** Drag and Drop.
 -   **Day 22:** Drawing App.
+-   **Day 23:** Kinetic CSS Loader.
